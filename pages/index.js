@@ -9,6 +9,7 @@ const Home = () => {
   const [output, setOutput] = useState('')
 
   const generateOnInput = async () => {
+    setOutput('')
     setGenerating(true)
 
     console.log("Calling OpenAI...")
@@ -64,9 +65,11 @@ const Home = () => {
                   </div>
               </div>
               {output != "" && (
-                  <h1>
-                      <Typed strings={["hello"]} typeSpeed={40} />
-                  </h1>
+                  <Typed
+                          className="response-title"
+                          strings={[output]}
+                          typeSpeed={40}
+                      />
               )}
           </div>
       </div>

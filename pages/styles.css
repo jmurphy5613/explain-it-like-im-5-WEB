@@ -6,6 +6,10 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .root {
     display: flex;
     place-content: center flex-start;
@@ -415,5 +419,6 @@ textarea {
 }
 
 .response-title {
-    
+    color: white;
+    font-size: 2rem;
 }
